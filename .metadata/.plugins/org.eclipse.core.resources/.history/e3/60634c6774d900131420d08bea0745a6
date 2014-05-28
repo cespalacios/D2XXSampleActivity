@@ -1,0 +1,12 @@
+package com.ces.exampleuno;
+
+import android.app.Activity;
+import android.os.Bundle;
+ 
+public class FrmSaludo extends Activity {
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.pantallados);
+       }
+}
