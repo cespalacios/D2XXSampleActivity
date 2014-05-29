@@ -1,0 +1,15 @@
+/* 
+    Document   : style
+    Created on : 16-oct-2012, 12:16:20
+    Author     : mnrohoden
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+table.innertable td { border: 0; }
+
+

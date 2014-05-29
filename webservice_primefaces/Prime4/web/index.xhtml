@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <title>WEB APP RFID</title>
+    </h:head>
+    
+    <center>
+    <p:spacer width="100" height="120"></p:spacer>
+    <br> </br>
+    
+    <h:form style="width:425px; background-color: #c9cbcc; border-width: 1px; border-style: outset;height: 252px;" >
+        
+            <p:graphicImage value="/images/titulo_WS.png"/>            
+            <br> </br>  
+            <br> </br> 
+             
+            <h:outputLink id="loginLink" value="javascript:void(0)" onclick="dlg.show()" title="login">
+                <p:graphicImage value="/images/Boton_WS.png"/>  
+                
+            </h:outputLink>
+            <br/>
+        
+    </h:form>
+</center>
+
+
+    <p:growl id="growl" showDetail="true" life="3000" />
+
+    <p:dialog id="dialog" header="Login" widgetVar="dlg" modal="true">
+        <h:form>
+            <h:panelGrid columns="2" cellpadding="10" border="0">
+
+
+                <h:outputLabel for="username" value="Usuario: *" />
+                <p:inputText value="#{loginBean.username}" id="username" label="username" />
+
+                <h:outputLabel for="password" value="Contraseña: *" />
+                <h:inputSecret value="#{loginBean.password}" id="password" label="password" />
+
+                <f:facet name="footer">
+                    <p:commandButton id="loginButton" value="Ingresar"
+                                     update=":growl"
+                                     actionListener="#{loginBean.login}"
+                                     oncomplete="handleLoginRequest(xhr, status, args)"
+                                     action="#{loginBean.login2}"/>
+                </f:facet>
+            </h:panelGrid>
+        </h:form>
+    </p:dialog>
+
+
+    <script type="text/javascript">  
+        function handleLoginRequest(xhr, status, args) {
+            if(args.validationFailed || !args.loggedIn) {  
+                jQuery('#dialog').effect("shake", { times:3 }, 100);  
+            } else {  
+                dlg.hide();  
+                jQuery('#loginLink').fadeOut();  
+            }  
+        }  
+    </script>  
+
+
+
+</html>

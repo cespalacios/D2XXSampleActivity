@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <h:head>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <title>Base de datos</title>
+    </h:head>
+
+
+    <h:form>
+
+        <p:toolbar>
+            <p:toolbarGroup align="left">
+                <p:commandButton value="Tabla" />
+
+                <p:separator />
+
+                <p:commandButton type="submit" id="id4" title="Update" icon="ui-icon-arrowrefresh-1-s"
+                                 ajax="false" actionListener="#{loginBean.getperInfoAll()}" />
+                <p:commandButton type="button" title="Delete" icon="ui-icon-trash"/>
+                <p:commandButton type="button" title="Print" icon="ui-icon-print"/>
+            </p:toolbarGroup>
+
+            <p:toolbarGroup align="right">
+                <p:menuButton value="Opciones">
+                    <p:menuitem value="Salir" action="index" immediate="true"/>
+                    <p:menuitem value="Íconos"
+                                url="http://www.petefreitag.com/cheatsheets/jqueryui-icons/" />
+                    <p:menuitem value="Acerca de"
+                                url="http://www.primefaces.org/showcase/touch" />
+                </p:menuButton>
+            </p:toolbarGroup>
+
+        </p:toolbar>
+
+        <p:accordionPanel id="acordion">
+
+            <p:tab title="Base de Datos: Edificio UGTI">
+                <p:dataTable id="tabla" var="item" value="#{loginBean.getperInfoAll()}" >
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Id" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.id}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-1" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor1}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-2" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor2}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-3" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor3}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-4" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor4}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-5" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor5}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-6" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor6}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-7" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor7}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Sensor-8" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.sensor8}" /> 
+                    </p:column>
+
+                    <p:column> 		
+                        <f:facet name="header"> 
+                            <h:outputText value="Fecha/Hora" /> 	
+                        </f:facet> 		
+                        <h:outputText value="#{item.fecha_hora}" /> 
+                    </p:column>
+
+                </p:dataTable>
+
+                <p:poll interval="16" listener="#{loginBean.getperInfoAll()}" update="acordion" />
+            </p:tab>
+
+            <p:tab title="Gráfico de Riesgos">
+                <h:panelGroup width="600" styleClass="innertable" >
+
+
+                    <p:lineChart id="linear" value="#{loginBean.getLinearModel()}" legendPosition="w"
+                                 xaxisLabel="Tiempo (h/m/s) " yaxisLabel="Temperatura (ºC) "
+                                 minY="15" maxY="40"
+                                 title="Gráfico Sensores"  style="height:300px; width: 1000px" 
+                                 zoom="true" >
+                    </p:lineChart>
+
+                </h:panelGroup>
+            </p:tab>
+
+        </p:accordionPanel>
+
+        <!---
+
+        <p:accordionPanel id="acordion">
+            <p:tab title="Base de Datos: Edificio UGTI"> 
+                <center>
+                    <h:outputText value= "Detalle Sensores"/>
+
+                    
+
+
+                </center>
+            </p:tab>
+
+            <p:tab title="Gráfico de riesgos"> 
+                <center>
+
+                </center>
+            </p:tab>
+        </p:accordionPanel>
+        -->
+    </h:form>
+</html>
