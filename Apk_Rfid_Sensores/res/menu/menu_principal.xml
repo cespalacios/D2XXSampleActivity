@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item 
+        android:id="@+id/MOp1"
+        android:title="Menú"
+        android:icon="@drawable/ic_menu_largetiles">
+    </item>
+    
+    <item 
+        android:id="@+id/MOp2"
+        android:title="Evacuación"
+        android:icon="@drawable/ic_menu_flash">
+    </item>
+    
+    <item 
+        android:id="@+id/MOp3"
+        android:title="Salir"
+        android:icon="@drawable/ic_menu_exit">
+    </item>"
+    
+
+</menu>

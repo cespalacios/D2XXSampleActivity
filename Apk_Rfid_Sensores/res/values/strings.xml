@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Programa ejemplo D2XX para transmision de dats por ftdi modo hostUsb. Lectura de Módulo RFid</string>
+    <string name="app_name">Sistema de Evacuación RFID</string>
+</resources>

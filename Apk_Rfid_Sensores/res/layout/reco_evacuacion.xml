@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical"
+        >
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/fondo"
+    >
+        
+
+    <ImageView
+	    android:id="@+id/imageView11"
+	    android:layout_width="match_parent"
+	    android:layout_height="74dp"
+	    android:src="@drawable/titulo" 
+	    />
+    
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recomendaciones para Evacuación"
+        android:textSize="24dp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="#DDDDDD"
+        android:text="- En caso de incendio, al salir de una dependencía, cerrar todas las puertas que atravesemos para evitar la propagación del humo y fuego." />
+    
+   <LinearLayout 
+       	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:weightSum="100"
+    	android:paddingTop="20dp"
+    	android:paddingRight="10dp"
+    	>
+
+       <TextView
+           android:id="@+id/tV22"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:layout_weight="70"
+           android:paddingLeft="20dp"
+           android:textColor="#DDDDDD"
+           android:text="- Avisar a los bomberos o casas de asistencia inmediata"
+           android:textSize="20dp" />
+
+   <Button
+	        android:id="@+id/Bemergencia"
+	        android:layout_width="wrap_content"
+	        android:layout_height="45dp"
+	        android:layout_weight="20"
+	          
+	        android:background="@drawable/llamadasmenu1"
+	        android:paddingTop="20dp"
+	        
+	        />
+    
+   </LinearLayout> 
+   
+   <LinearLayout 
+       android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="vertical"
+    	android:paddingTop="20dp"
+    	android:paddingRight="10dp">
+       
+       <TextView 
+           android:id="@+id/tV222"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:paddingLeft="20dp"
+           android:text="- Asegurarse que no quede nadie dentro de la oficina"
+           android:textSize="20dp"
+           android:textColor="#DDDDDD"
+           />
+       
+       <TextView 
+           android:id="@+id/tV33"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:paddingLeft="20dp"
+           android:paddingTop="20dp"
+           android:text="- No detenerse a recoger objetos personales"
+           android:textSize="20dp"
+           android:textColor="#DDDDDD"
+           />
+       
+      <LinearLayout 
+          	android:layout_width="wrap_content"
+	    	android:layout_height="wrap_content"
+	    	android:orientation="horizontal"
+	    	android:weightSum="100"
+	      	android:paddingRight="10dp"
+	      	android:paddingTop="10dp"
+	      	android:gravity="center_vertical">
+       
+       <TextView 
+           android:id="@+id/tV44"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:paddingLeft="20dp"
+           android:text="- Nunca movilizarse hacia las plantas superiores del edificio, excepto desde parqueaderos y sótanos. Seguir las recomendaciones del sistema de evacuación de la app."
+           android:textSize="20dp"
+           android:layout_weight="80"
+           android:textColor="#DDDDDD"
+           />
+       
+        <Button
+	        android:id="@+id/Bevacuation"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="20"
+	        android:background="@drawable/evacuacionmenu1"
+	        />
+       
+       </LinearLayout>
+       
+      <LinearLayout 
+        	android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="vertical"
+    		android:paddingTop="20dp"
+   		 	android:paddingRight="10dp">
+          
+          <TextView 
+           android:id="@+id/tV66"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:paddingLeft="20dp"
+           android:text="- Bajar caminando por las escaleras, en ninguna situación utilizar el ascensor."
+           android:textSize="20dp"
+           android:textColor="#DDDDDD"
+           />
+          
+      </LinearLayout>
+      
+   </LinearLayout>
+
+</LinearLayout>
+    </ScrollView>
